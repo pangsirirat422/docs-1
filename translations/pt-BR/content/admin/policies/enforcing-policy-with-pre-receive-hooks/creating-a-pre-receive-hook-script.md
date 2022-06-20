@@ -92,7 +92,7 @@ A variável `$GITHUB_VIA` está disponível no ambiente de pre-receive quando a 
 | <pre>git refs update api</pre> | Atualização de um ref através da API                                        | "[Banco de dados Git](/rest/reference/git#update-a-reference)" na documentação da API REST                                                                                          |
 | <pre>git repo contents api</pre> | Mudança no conteúdo de um arquivo através da API                            | "[Criar ou atualizar o conteúdo do arquivo](/rest/reference/repos#create-or-update-file-contents)" na documentação da API REST                                                      |
 
-{%- ifversion ghes > 3.0 %}
+{%- ifversion ghes %}
 | 
 
 `merge` | Merge de um pull request usando o merge automático | "[Merge automático de um pull request](/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/automatically-merging-a-pull-request)" |
@@ -139,7 +139,7 @@ Recomendamos consolidar os hooks em um único repositório. Se o repositório co
    $ git push
    ```
 
-3. [Crie o hook pre-receive](/enterprise/{{ currentVersion }}/admin/guides/developer-workflow/managing-pre-receive-hooks-on-the-github-enterprise-server-appliance/#creating-pre-receive-hooks) na instância do {% data variables.product.prodname_ghe_server %}.
+3. [Crie o hook pre-receive](/enterprise/admin/guides/developer-workflow/managing-pre-receive-hooks-on-the-github-enterprise-server-appliance/#creating-pre-receive-hooks) na instância do {% data variables.product.prodname_ghe_server %}.
 
 ## Testar scripts pre-receive no local
 Você pode testar um script do hook pre-receive localmente antes de criá-lo ou atualizá-lo em {% data variables.product.product_location %}. Uma forma de fazer isso é criar um ambiente Docker local para funcionar como repositório remoto que pode executar o hook pre-receive.

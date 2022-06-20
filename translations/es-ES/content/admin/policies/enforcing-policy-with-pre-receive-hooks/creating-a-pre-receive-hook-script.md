@@ -92,7 +92,7 @@ La variable `$GITHUB_VIA` se encuentra disponible en el ambiente de gancho de pr
 | <pre>git refs update api</pre> | Actualización de una referencia a tracvés de la API                              | "[Base de datos de Git](/rest/reference/git#update-a-reference)" en la documentación de la API de REST                                                                         |
 | <pre>git repo contents api</pre> | Cambio al contenido de un archivo a través de la API                             | "[Crear o actualizar el contenido de un archivo](/rest/reference/repos#create-or-update-file-contents)" en la API de REST                                                      |
 
-{%- ifversion ghes > 3.0 %}
+{%- ifversion ghes %}
 | 
 
 `merge` | Fusión de una solicitud de cambios utilizando la fusión automática | "[Fusionar una solicitud de cambios automáticamente](/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/automatically-merging-a-pull-request)" |
@@ -139,7 +139,7 @@ Recomendamos los ganchos de consolidación a un solo repositorio. Si el reposito
    $ git push
    ```
 
-3. [Crear la instancia de ganchos de pre-recepción](/enterprise/{{ currentVersion }}/admin/guides/developer-workflow/managing-pre-receive-hooks-on-the-github-enterprise-server-appliance/#creating-pre-receive-hooks) on the {% data variables.product.prodname_ghe_server %}.
+3. [Create the pre-receive hook](/enterprise/admin/guides/developer-workflow/managing-pre-receive-hooks-on-the-github-enterprise-server-appliance/#creating-pre-receive-hooks) on the {% data variables.product.prodname_ghe_server %} instance.
 
 ## Probar scripts de pre-recepción localmente
 Puedes probar un script de gancho de pre-recepción localmente antes de que lo crees o actualices en {% data variables.product.product_location %}. Un método es crear un entorno de Docker local para que actúe como un repositorio remoto que pueda ejecutar el gancho de pre-recepción.

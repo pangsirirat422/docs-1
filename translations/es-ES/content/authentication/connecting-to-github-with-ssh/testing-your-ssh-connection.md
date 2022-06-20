@@ -37,7 +37,7 @@ Cuando pruebes tu conexión, tendrás que autenticar esta acción utilizando tu 
   > ¿Estás seguro de que quieres continuar conectado (sí/no)?
   ```
 
-3. Verifica que la huella digital en el mensaje que ves empate con {% ifversion fpt or ghec %}[la huella digital de la llave pública de RSA de {% data variables.product.prodname_dotcom %}](/github/authenticating-to-github/githubs-ssh-key-fingerprints){% else %}la huella digital de la llave pública de tu empresa{% endif %}. Si lo hace, entonces teclea `yes`:
+3. Verifica que la huella dactilar en el mensaje que ves empate con {% ifversion fpt or ghec %}[la huella dactilar de la llave pública de {% data variables.product.prodname_dotcom %}](/github/authenticating-to-github/githubs-ssh-key-fingerprints){% else %} la huella dactilar de la llave pública de tu empresa{% endif %}. Si lo hace, entonces teclea `yes`:
   ```shell
   > Hi <em>username</em>! You've successfully authenticated, but GitHub does not
   > provide shell access.
@@ -56,5 +56,11 @@ Cuando pruebes tu conexión, tendrás que autenticar esta acción utilizando tu 
   Se trata de un problema conocido con determinadas distribuciones de Linux. Para obtener más información, consulta ["Error: El agente admitió una falla para registrarse"](/articles/error-agent-admitted-failure-to-sign).
 
   {% endlinux %}
+
+   {% note %}
+
+   **Note:** The remote command should exit with code 1.
+
+   {% endnote %}
 
 4. Comprueba que el mensaje resultante contenga tu nombre de usuario. Si recibes un mensaje de "permiso denegado", consulta ["Error: Permiso denegado (publickey)"](/articles/error-permission-denied-publickey).
